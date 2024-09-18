@@ -1,0 +1,573 @@
+:root { 
+    --navigation-background-color: #33292a;
+    --navigation-text-color: #fff; 
+    /*main background*/
+    --main-background-color-One: #644b4f;
+    --main-background-color-Two:#333333;
+    --main-background-color-Three: #f2f2f2; 
+    /*odkaz*/
+    --anchor-color:#efa69d;
+    --anchor-hover-color:#e9877b;
+    /*kulacení rohů*/
+    --border-radius: 5px;
+} 
+
+* { 
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+} 
+
+body {     
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    
+    font-family: Roboto;
+}  
+
+p{ 
+    font-size: 16px;
+}
+
+/**************************************************/
+/***************************************************/
+
+
+/** Navigace **/
+.pozadi-navigace{     
+    position: fixed;
+    width: 100%; 
+    height: 4.5em;
+    background-color: var(--navigation-background-color);
+    z-index: 10;
+}
+
+.Navigace {  
+    display: flex;  
+    justify-content: space-evenly; 
+    /* position: fixed; */
+    width: 100%;    
+    color: var(--navigation-text-color);
+} 
+
+.Navigace ul{ 
+    position: fixed;    
+    z-index: 100;
+} 
+
+@media (max-width: 768px) { 
+    .Navigace ul{ 
+        display: none;
+    }
+} 
+
+.Navigace ul li{ 
+    display: inline-block;     
+    font-size: 2em;
+    padding: 20px; 
+    margin-right: 50px;     
+} 
+
+
+
+/************************************************/
+
+/*Hamburger*/
+#hamburger {
+    margin-left: 80%;
+    margin-top: 3%;
+    position: fixed;
+    z-index: 51;
+  }
+  
+  @media (min-width: 768px) {
+    #hamburger {
+      display: none;
+    }
+  }
+  
+  .piece {
+    margin-top: 5px;
+    height: 10px;
+    aspect-ratio: 5/1;
+    border-radius: 20% / 90%;
+    background-color: var(--navigation-text-color);
+  }
+  
+  #hamburger:active div:first-child {
+    transform: translateY(15px) translateX(-5px) rotate(45deg);
+  }
+  
+  #hamburger:active div:nth-child(2) {
+    transform: translateX(10px) rotate(-45deg);
+  }
+  
+  #hamburger:active div:last-child {
+    transform: translateY(-15px) translateX(10px) rotate(-45deg);
+  }
+  
+  #hamburger:active div {
+    aspect-ratio: 3/1;
+  } 
+  /************************************************/ 
+  /************************************************/
+
+  /*Div s pozadím a h1 v headeru */
+  .pozadi-header {
+    display: flex;
+    position: relative; 
+    background: url(./images/img_1.jpg);
+   background-size: cover;
+    width: 100%; 
+    min-height: 100vh;      
+  } 
+
+
+ /* div s h1*/
+  .nadpis { 
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    position: absolute;  
+    text-align: right;      
+    color: var(--navigation-text-color);
+  } 
+
+  /*h1*/
+  .h1-nadpis{ 
+    font-family: sans-serif;
+    font-size: 4.5em;
+    margin-right: 15%;
+    margin-bottom: 4%;
+    span{ 
+        display: block;
+    }
+  }   
+  /*responzivita pro mobil*/
+  @media (max-width: 768px){ 
+    .pozadi-header {         
+        background-size: 155% 100%; 
+        margin-bottom: 10%;               
+    } 
+    .h1-nadpis { 
+        font-size: 3em;
+        margin-right: 5%;
+    }
+ } 
+ /***************************************************************************/
+ /************************ Main ***********************/
+ /***************************************************************************/
+
+ /** první sekce **/
+.container-section-One { 
+    display: flex; 
+    justify-content: center;   
+    padding: 5%;
+} 
+
+ /* první div*/
+.about-text { 
+    display: flex;
+    flex-direction: column; 
+    margin-right: 1%;
+    width: 390px;  
+    line-height: 1.5;    
+} 
+/*fotka*/
+.first-photo{ 
+   width: 480px ; 
+   border-radius: var(--border-radius);
+}  
+
+/** responzivita **/
+@media (max-width: 768px) { 
+    .container-section-One {        
+      display: block;     
+     
+    } 
+    .about-text { 
+        display: block;
+        width: 90%; 
+        margin: 0 auto;
+        margin-bottom: 10%;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        h2{ 
+            margin-bottom: 10%;
+        }
+    } 
+    .first-photo{ 
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+} 
+/***************************************/
+/**              Sekce 2           *****/
+/***************************************/ 
+
+/*** druhá sekce ***/
+.text-section-two { 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--navigation-background-color);
+    color: var(--navigation-text-color);
+    padding: 3%; 
+
+} 
+
+/*paragraf v druhé sekci */
+.paragraph-two{
+    text-align: center; 
+    line-height: 1.5;
+    word-spacing: 2px;
+    margin-top: 1%;
+    /* font-size: 1.5em; */
+    width: 80%;
+} 
+
+/*** obrázky v sekci **/
+.pictures-section-two { 
+    display: flex;
+    flex-direction: column;   
+} 
+
+.pictures-section-two ul{ 
+     display: flex; 
+     flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    
+}
+ /** li v sekci 2 **/
+.pictures-section-two ul li{ 
+    display: flex;   
+    margin-top: 10%;
+}
+
+.pictures-section-two ul li img{ 
+    width: 20%;
+    
+}
+/** divi v li **/
+.container-in-section-two-li{ 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    } 
+
+    /** paragrafy v li*/
+.container-in-section-two-li p{ 
+    margin-top: 25px;
+}
+
+
+
+/* responzivita druhé sekce, zkouška od (min-width) */
+@media (min-width: 768px) { 
+    .paragraph-two{ 
+        text-align: justify;  
+        width: 49%;
+    }
+    
+    .pictures-section-two ul { 
+        display: flex; 
+        flex-direction: row;
+        
+    } 
+    .pictures-section-two ul li{ 
+        display: flex;
+        justify-content: center;
+        margin-top: 1%; 
+        
+    } 
+    /** div v li v sekci 2 **/
+    .container-in-section-two-li{ 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+
+    }
+} 
+/******************************************************************/
+/*******************    Třetí sekce               *****************/ 
+
+/** obalující kontejner **/ 
+.photo-conteiner{ 
+    display: flex;
+    flex-direction: column;
+    padding: 5%; 
+    margin-top: 10%;   
+}  
+
+/** divi s fotkami **/
+.section-third-photo{        
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+    
+}  
+
+/*** div s h2 ***/
+.background-h2{
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    padding: 10%;
+    background-color: var(--main-background-color-Three);
+}
+
+/** obrázky v sekci **/
+.img-section-third{ 
+    width: 100%; 
+    height: 100%;
+    border-radius: var(--border-radius);
+} 
+
+/****** Responzivita, od min-width  ************/ 
+
+@media (min-width: 768px) {       
+    .photo-conteiner { 
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr);
+        grid-template-rows: repeat( 3, 1fr); 
+        grid-gap: 10px;
+        padding: 5%;
+        margin: 0 auto;       
+        width: 50%;        
+    } 
+
+    .section-third-photo{ 
+        width: 100%; 
+        height: 100%; 
+        margin-top: 0;
+    } 
+
+    .background-h2{ 
+        padding: 0;
+    }
+} 
+
+/*******************************************************/ 
+/**************** Čtvrtá sekce *************************/ 
+
+/** sekce **/
+.fourth-section{    
+    background-color: var(--main-background-color-One); 
+    color: var(--navigation-text-color);
+}  
+
+/** obalující div **/
+.conatiner-section-fourth{ 
+    display: block; 
+    text-align: center;    
+    padding: 5%;
+}  
+
+/** div s h2 **/
+.section-fourth-h2{ 
+    h2 { 
+        width: 100%;
+        margin-bottom: 5%;
+    }
+}
+
+/** div s textem **/
+.section-fourth-text{ 
+    text-align: justify;    
+    margin-left: 1%;
+} 
+
+/** paragraf **/
+.section-fourth-text{ 
+    width: 100%;    
+} 
+
+/** druhý paragraf **/
+.second-paragraph{ 
+    margin-top: 20px;
+    margin-bottom: 50px;
+} 
+
+/** tlačítko **/
+.section-fourth-button{ 
+    padding: 3%;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+} 
+
+/*** responzivita **/
+@media (min-width: 768px) { 
+    .conatiner-section-fourth {
+    display: flex; 
+    justify-content: center;    
+    } 
+    .section-fourth-h2{ 
+        h2 { 
+            text-align: left;
+            width: 70%; 
+            margin: 0;
+        }
+    } 
+    .section-fourth-text{ 
+        width: 30%;    
+    } 
+
+} 
+
+/***************************************************************/
+/********************** Sekce 5 ********************************/
+/***************************************************************/
+
+/** 5 sekce **/
+.fifth-section{ 
+    margin-top: 25%;
+}
+
+/** obalující div **/
+.container-section-fifth{ 
+    display: flex; 
+    flex-direction: column;
+} 
+
+/** div na články **/
+.section-fifth-column {     
+    text-align: center;
+} 
+
+/** divi s články **/
+.column{ 
+    width: 100%;
+    text-align: center;
+    h2{ 
+        margin-bottom: 3%;
+    }
+} 
+
+/** paragrafy **/
+.column p{
+    text-align: center; 
+    margin: 0 auto;
+    width: 90%; 
+    margin-bottom: 25px;
+} 
+
+/** obrázky **/
+.column img{ 
+    border-radius: 50%;
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    object-position: center; 
+    margin-bottom: 15px;
+} 
+
+/** responzivita **/
+@media (min-width: 768px) { 
+    .fifth-section{ 
+        margin-top: 5%;
+    }
+    
+    .section-fifth-column { 
+        display: flex; 
+        justify-content: center;
+    } 
+
+    .column{ 
+        width: 30%;        
+    }  
+
+    .column p{       
+        width: 50%; 
+        margin-bottom: 25px;
+    } 
+} 
+
+/**************************************************************/
+/********     Poslední sekce                       ************/
+/**************************************************************/ 
+
+/** poslední sekce **/
+.Galery-section{ 
+    margin-top: 25%;
+}
+
+/** obalující div **/
+.container-last-section { 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+} 
+
+/** divi s obrázky **/
+.last-section-img{ 
+    width: 100%; 
+    height: 100%;            
+} 
+
+/** obrázky v sekci **/ 
+.img-last-section{ 
+    width: 100%;
+    height: 100%; 
+      
+} 
+
+/** responzivita **/
+@media (min-width: 768px) { 
+    .Galery-section{ 
+        margin-top: 5%;
+    }  
+
+    .container-last-section { 
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        
+    }  
+    .img-last-section{ 
+        width: 100%;
+        height: 100%;    
+    } 
+} 
+
+/***********************************************************/ 
+/************           Footer               ***************/
+/***********************************************************/ 
+
+footer { 
+    display: flex;     
+    align-items: center;
+    flex-direction: column; 
+    padding: 10%; 
+    background-color: var(--main-background-color-Two);
+    color: var(--navigation-text-color);
+}  
+
+footer a{ 
+    color: var(--anchor-color);
+    margin-bottom: 10px;
+} 
+
+footer a:hover{ 
+    color: var(--anchor-hover-color);
+}
+
+footer h6{ 
+    font-size: 14px;
+}
+
+/** responzivita **/
+@media (min-width: 768px){ 
+    footer { 
+        padding: 2%;
+    } 
+
+    footer h6{ 
+        font-size: 16px;
+    }
+}
+
+ 
