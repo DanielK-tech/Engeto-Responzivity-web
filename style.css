@@ -70,7 +70,7 @@ p {
 /************************************************/
 
 /*Hamburger*/
-#hamburger {
+.Hamburger {
   margin-left: 80%;
   margin-top: 3%;
   position: fixed;
@@ -78,7 +78,7 @@ p {
 }
 
 @media (min-width: 768px) {
-  #hamburger {
+  .Hamburger {
     display: none;
   }
 }
@@ -91,19 +91,19 @@ p {
   background-color: var(--navigation-text-color);
 }
 
-#hamburger:active div:first-child {
+.Hamburger:active div:first-child {
   transform: translateY(15px) translateX(-5px) rotate(45deg);
 }
 
-#hamburger:active div:nth-child(2) {
+.Hamburger:active div:nth-child(2) {
   transform: translateX(10px) rotate(-45deg);
 }
 
-#hamburger:active div:last-child {
+.Hamburger:active div:last-child {
   transform: translateY(-15px) translateX(10px) rotate(-45deg);
 }
 
-#hamburger:active div {
+.Hamburger:active div {
   aspect-ratio: 3/1;
 }
 /************************************************/
