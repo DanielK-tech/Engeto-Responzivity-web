@@ -253,7 +253,7 @@ p {
 
 /** paragrafy v li*/
 .container-in-section-two-li p {
-  margin-top: 25px;
+  margin-top: 25px; /** **/
 }
 
 /* responzivita druhé sekce, zkouška od (min-width) */
@@ -488,6 +488,7 @@ p {
 
 /** divi s obrázky **/
 .last-section-img {
+    display: flex;
   width: 100%;
   height: 100%;
 }
