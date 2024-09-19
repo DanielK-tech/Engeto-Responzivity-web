@@ -72,14 +72,21 @@ p {
 /*Hamburger*/
 .Hamburger {
   margin-left: 80%;
-  margin-top: 3%;
+  margin-top: 3%; 
   position: fixed;
   z-index: 51;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .Hamburger {
     display: none;
+  }
+} 
+
+@media(width: 768px) { 
+  .Hamburger { 
+    margin-left: 90%;
+    margin-top: 2%;
   }
 }
 
