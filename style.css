@@ -43,28 +43,44 @@ p {
 
 .Navigace {
   display: flex;
-  justify-content: space-evenly;
-  /* position: fixed; */
+  justify-content: center;
   width: 100%;
   color: var(--navigation-text-color);
 }
 
 .Navigace ul {
+  display: flex;
   position: fixed;
+  width: 100%;
+  justify-content: center;
   z-index: 100;
 }
 
-@media (max-width: 768px) {
-  .Navigace ul {
-    display: none;
+
+.Navigace ul li {
+  list-style: none;
+  width: fit-content;
+  font-size: 1.7em;
+  padding-top: 2%;
+  padding-right: 3%;
+
+}
+
+@media (min-width: 1280px) {
+  .Navigace ul li {
+    display: inline-block;
+    font-size: 2em;
+    padding: 20px;
+    margin-right: 50px;
   }
 }
 
-.Navigace ul li {
-  display: inline-block;
-  font-size: 2em;
-  padding: 20px;
-  margin-right: 50px;
+
+
+@media (max-width: 767px) {
+  .Navigace ul {
+    display: none;
+  }
 }
 
 /************************************************/
@@ -72,20 +88,20 @@ p {
 /*Hamburger*/
 .Hamburger {
   margin-left: 80%;
-  margin-top: 3%; 
+  margin-top: 3%;
   position: fixed;
   z-index: 51;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .Hamburger {
     display: none;
   }
-} 
+}
 
-@media(width: 768px) { 
-  .Hamburger { 
-    margin-left: 90%;
+@media(min-width: 540px) {
+  .Hamburger {
+    margin-left: 85%;
     margin-top: 2%;
   }
 }
@@ -113,6 +129,7 @@ p {
 .Hamburger:active div {
   aspect-ratio: 3/1;
 }
+
 /************************************************/
 /************************************************/
 
@@ -143,21 +160,25 @@ p {
   font-size: 4.5em;
   margin-right: 15%;
   margin-bottom: 4%;
+
   span {
     display: block;
   }
 }
+
 /*responzivita pro mobil*/
 @media (max-width: 768px) {
   .pozadi-header {
     background-size: 155% 100%;
     margin-bottom: 10%;
   }
+
   .h1-nadpis {
     font-size: 3em;
     margin-right: 5%;
   }
 }
+
 /***************************************************************************/
 /************************ Main ***********************/
 /***************************************************************************/
@@ -177,6 +198,7 @@ p {
   width: 390px;
   line-height: 1.5;
 }
+
 /*fotka*/
 .first-photo {
   width: 480px;
@@ -184,10 +206,17 @@ p {
 }
 
 /** responzivita **/
+@media(max-width: 1024px) {
+  .first-photo {
+    height: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .container-section-One {
     display: block;
   }
+
   .about-text {
     display: block;
     width: 90%;
@@ -195,16 +224,19 @@ p {
     margin-bottom: 10%;
     line-height: 1.5;
     letter-spacing: 1px;
+
     h2 {
       margin-bottom: 10%;
     }
   }
+
   .first-photo {
     display: block;
     width: 90%;
     margin: 0 auto;
   }
 }
+
 /***************************************/
 /**              Sekce 2           *****/
 /***************************************/
@@ -242,6 +274,7 @@ p {
   justify-content: center;
   align-content: center;
 }
+
 /** li v sekci 2 **/
 .pictures-section-two ul li {
   display: flex;
@@ -251,6 +284,7 @@ p {
 .pictures-section-two ul li img {
   width: 20%;
 }
+
 /** divi v li **/
 .container-in-section-two-li {
   display: flex;
@@ -260,7 +294,8 @@ p {
 
 /** paragrafy v li*/
 .container-in-section-two-li p {
-  margin-top: 25px; /** **/
+  margin-top: 25px;
+  /** **/
 }
 
 /* responzivita druhé sekce, zkouška od (min-width) */
@@ -274,11 +309,13 @@ p {
     display: flex;
     flex-direction: row;
   }
+
   .pictures-section-two ul li {
     display: flex;
     justify-content: center;
     margin-top: 1%;
   }
+
   /** div v li v sekci 2 **/
   .container-in-section-two-li {
     display: flex;
@@ -286,6 +323,7 @@ p {
     align-items: center;
   }
 }
+
 /******************************************************************/
 /*******************    Třetí sekce               *****************/
 
@@ -305,11 +343,13 @@ p {
 
 /*** div s h2 ***/
 .background-h2 {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  text-align: center;
   padding: 10%;
   background-color: var(--main-background-color-Three);
+ 
 }
 
 /** obrázky v sekci **/
@@ -339,7 +379,10 @@ p {
   }
 
   .background-h2 {
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
   }
 }
 
@@ -397,6 +440,7 @@ p {
     display: flex;
     justify-content: center;
   }
+
   .section-fourth-h2 {
     h2 {
       text-align: left;
@@ -404,6 +448,7 @@ p {
       margin: 0;
     }
   }
+
   .section-fourth-text {
     width: 30%;
   }
@@ -433,6 +478,7 @@ p {
 .column {
   width: 100%;
   text-align: center;
+
   h2 {
     margin-bottom: 3%;
   }
@@ -457,6 +503,13 @@ p {
 }
 
 /** responzivita **/
+@media(min-width: 1025px) {
+  .column p {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+}
+
 @media (min-width: 768px) {
   .fifth-section {
     margin-top: 5%;
@@ -469,13 +522,8 @@ p {
 
   .column {
     width: 30%;
-  }
-
-  .column p {
-    width: 50%;
-    margin-bottom: 25px;
-  }
-}
+  }  
+} 
 
 /**************************************************************/
 /********     Poslední sekce                       ************/
@@ -495,7 +543,7 @@ p {
 
 /** divi s obrázky **/
 .last-section-img {
-    display: flex;
+  display: flex;
   width: 100%;
   height: 100%;
 }
@@ -517,6 +565,7 @@ p {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
+
   .img-last-section {
     width: 100%;
     height: 100%;
