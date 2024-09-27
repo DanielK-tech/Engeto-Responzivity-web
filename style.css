@@ -49,7 +49,8 @@ p {
 }
 
 .Navigace ul {
-  display: flex;
+  /* display: flex; */
+  display: none;
   position: fixed;
   width: 100%;
   justify-content: center;
@@ -64,7 +65,15 @@ p {
   padding-top: 2%;
   padding-right: 3%;
 
+} 
+/** responzivita **/
+@media (min-width: 768px){ 
+  .Navigace ul { 
+    display: flex;
+  }
 }
+  
+
 
 @media (min-width: 1280px) {
   .Navigace ul li {
@@ -72,14 +81,6 @@ p {
     font-size: 2em;
     padding: 20px;
     margin-right: 50px;
-  }
-}
-
-
-
-@media (max-width: 767px) {
-  .Navigace ul {
-    display: none;
   }
 }
 
