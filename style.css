@@ -41,14 +41,13 @@ p {
   z-index: 10;
 }
 
-.Navigace {
+.navigace {
   display: flex;
   justify-content: center;
-  width: 100%;
-  color: var(--navigation-text-color);
+  width: 100%;  /
 }
 
-.Navigace ul {
+.navigace ul {
   /* display: flex; */
   display: none;
   position: fixed;
@@ -58,17 +57,22 @@ p {
 }
 
 
-.Navigace ul li {
+.navigace ul li {
   list-style: none;
-  width: fit-content;
+  width: fit-content;  
   font-size: 1.7em;
   padding-top: 2%;
-  padding-right: 3%;
+  padding-right: 3%;      
+}  
 
-} 
+.navigace ul li a{ 
+  text-decoration: none; 
+  color: var(--navigation-text-color); 
+}
+
 /** responzivita **/
 @media (min-width: 768px){ 
-  .Navigace ul { 
+  .navigace ul { 
     display: flex;
   }
 }
@@ -76,7 +80,7 @@ p {
 
 
 @media (min-width: 1280px) {
-  .Navigace ul li {
+  .navigace ul li {
     display: inline-block;
     font-size: 2em;
     padding: 20px;
@@ -87,7 +91,7 @@ p {
 /************************************************/
 
 /*Hamburger*/
-.Hamburger {
+.hamburger {
   margin-left: 80%;
   margin-top: 3%;
   position: fixed;
@@ -95,13 +99,13 @@ p {
 }
 
 @media (min-width: 768px) {
-  .Hamburger {
+  .hamburger {
     display: none;
   }
 }
 
 @media(min-width: 540px) {
-  .Hamburger {
+  .hamburger {
     margin-left: 85%;
     margin-top: 2%;
   }
@@ -115,19 +119,19 @@ p {
   background-color: var(--navigation-text-color);
 }
 
-.Hamburger:active div:first-child {
+.hamburger:active div:first-child {
   transform: translateY(15px) translateX(-5px) rotate(45deg);
 }
 
-.Hamburger:active div:nth-child(2) {
+.hamburger:active div:nth-child(2) {
   transform: translateX(10px) rotate(-45deg);
 }
 
-.Hamburger:active div:last-child {
+.hamburger:active div:last-child {
   transform: translateY(-15px) translateX(10px) rotate(-45deg);
 }
 
-.Hamburger:active div {
+.hamburger:active div {
   aspect-ratio: 3/1;
 }
 
@@ -532,7 +536,7 @@ p {
 /**************************************************************/
 
 /** poslední sekce **/
-.Galery-section {
+.galery-section {
   margin-top: 25%;
 }
 
@@ -558,7 +562,7 @@ p {
 
 /** responzivita **/
 @media (min-width: 768px) {
-  .Galery-section {
+  .galery-section {
     margin-top: 5%;
   }
 
