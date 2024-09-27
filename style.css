@@ -1,6 +1,7 @@
 :root {
   --navigation-background-color: #33292a;
-  --navigation-text-color: #fff;
+  --navigation-text-color: #fff; 
+  --navigation-before: radial-gradient(circle farthest-corner at 10% 20%,#efa69d 20%, #27ce21 110%);
   /*main background*/
   --main-background-color-One: #644b4f;
   --main-background-color-Two: #333333;
@@ -67,7 +68,20 @@ p {
 
 .navigace ul li a{ 
   text-decoration: none; 
+  position: relative;
   color: var(--navigation-text-color); 
+} 
+/** podsvícení **/
+.navigace ul li a::before{ 
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: var(--navigation-before);
+  filter: blur(10px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
 
 /** responzivita **/
