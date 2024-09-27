@@ -139,9 +139,11 @@ p {
   display: flex;
   position: relative;
   background: url(./images/img_1.jpg);
-  background-size: cover;
+  background-size: cover; 
+  background-position: 50% 8%;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100vh; 
+  margin-bottom: 10%;
 }
 
 /* div s h1*/
@@ -158,8 +160,8 @@ p {
 
 /*h1*/
 .h1-nadpis {
-  font-size: 4.5em;
-  margin-right: 15%;
+  font-size: 3em;
+  margin-right: 5%;
   margin-bottom: 4%;
 
   span {
@@ -168,15 +170,14 @@ p {
 }
 
 /*responzivita pro mobil*/
-@media (max-width: 768px) {
-  .pozadi-header {
-    background-size: 155% 100%;
-    margin-bottom: 10%;
+@media (min-width: 768px) {
+  .pozadi-header {    
+    margin-bottom: 0%;
   }
 
   .h1-nadpis {
-    font-size: 3em;
-    margin-right: 5%;
+    font-size: 4.5em;
+    margin-right: 15%;
   }
 }
 
