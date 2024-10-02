@@ -57,7 +57,6 @@ p {
   z-index: 100;
 }
 
-
 .navigace ul li {
   list-style: none;
   width: fit-content;
@@ -75,7 +74,7 @@ p {
 .navigace ul li a {
   text-decoration: none;
   position: relative;
-  color: var(--navigation-text-color);
+  color: var(--navigation-text-color);   
   z-index: 0;
 }
 /** podsvícení + pseudotřídy **/
@@ -97,8 +96,6 @@ p {
     display: flex;
   }
 }
-
-
 
 @media (min-width: 1280px) {
   .navigace ul li {
@@ -310,9 +307,14 @@ p {
 }
 
 .pictures-section-two ul li img {
-  width: 20%;
+  position: relative;
+  width: 20%;  
+  transition: transform 1.5s ease-in-out;
+}  
+/* mini animce :)*/
+.pictures-section-two ul li img:hover {
+  transform: rotate(360deg); 
 }
-
 /** divi v li **/
 .container-in-section-two-li {
   display: flex;
